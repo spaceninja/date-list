@@ -25,29 +25,19 @@
 		"oAP": "\/css\/main.css.map",
 		"oF": 0
 		},
+	"\/data\/dates.json": {
+		"ft": 524288,
+		"oA": 1,
+		"oAP": "\/data\/dates-min.json",
+		"oF": 0,
+		"oO": 0,
+		"oS": 1
+		},
 	"\/index.html": {
 		"ft": 8192,
 		"oA": 2,
 		"oAP": "\/index.html",
 		"oF": 0
-		},
-	"\/js\/listdates-min.js": {
-		"ft": 64,
-		"mi": 1,
-		"oA": 0,
-		"oAP": "\/js\/listdates-min-min.js",
-		"oF": 0,
-		"sC": 1,
-		"tS": 0
-		},
-	"\/js\/listdates.js": {
-		"ft": 64,
-		"mi": 1,
-		"oA": 0,
-		"oAP": "\/js\/listdates-min.js",
-		"oF": 0,
-		"sC": 1,
-		"tS": 0
 		},
 	"\/README.md": {
 		"cS": 0,
