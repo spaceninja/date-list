@@ -1,10 +1,9 @@
 /* global moment, humanizeDuration */
 var content = "";
-var dates = [];
 var xhr = new XMLHttpRequest();
 
 // Convert date array into HTML
-var listDates = function() {
+var listDates = function(dates) {
     for (var i = 0; i < dates.length; i++) {
         var durationText = "";
         var eventDate = moment(dates[i].date);
@@ -34,25 +33,41 @@ var listDates = function() {
     }
 };
 
-// Handle the JSON response
+// Prepare the Ajax request
+xhr.open('GET', 'data/dates.json', true);
+
+// Handle the Ajax response
 xhr.onload = function() {
-    if(xhr.status === 200) {
+    if (xhr.status >= 200 && xhr.status < 400) {
         // Parse the JSON data
-        dates = JSON.parse(xhr.responseText);
+        var dates = JSON.parse(xhr.responseText);
 
         // Build the date list
-        listDates();
+        listDates(dates);
 
         // Write the date list to the browser
         document.getElementById('datelist-content').innerHTML = content;
     } else {
+        // We reached our target server, but it returned an error
+
         // error message
-        content = '<tr><td colspan="3"><p>Whoops! Something went wrong. Please try again.</p></td></tr>';
+        content = 'Whoops! Something went wrong. Please try again.';
 
         // Write the error message to the browser
-        document.getElementById('datelist-content').innerHTML = content;
+        document.getElementById('datelist-error').innerHTML = content;
     }
 };
 
-xhr.open('GET', 'data/dates.json', true);
-xhr.send(null);
+// Handle an Ajax error
+xhr.onerror = function() {
+    // There was a connection error of some sort
+
+    // error message
+    content = 'Whoops! We couldn\'t reach the server. Please try again.';
+
+    // Write the error message to the browser
+    document.getElementById('datelist-error').innerHTML = content;
+};
+
+// Send the Ajax request
+xhr.send();
