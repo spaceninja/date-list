@@ -3,6 +3,7 @@ const xhr = new XMLHttpRequest();
 
 // Convert date array into HTML
 const listDates = function(dates) {
+    'use strict';
     let content = "";
 
     for (let i = 0; i < dates.length; i++) {
@@ -13,7 +14,7 @@ const listDates = function(dates) {
 
         // http://momentjs.com/docs/#/displaying/fromnow/
         // returns '25 days ago' or '19 hours ago'
-        let shortDuration = eventDate.fromNow();
+        const shortDuration = eventDate.fromNow();
 
         // https://github.com/EvanHahn/HumanizeDuration.js
         // returns '31 years, 8 months'
@@ -53,6 +54,7 @@ xhr.open('GET', 'data/dates.json', true);
 
 // Handle the Ajax response
 xhr.onload = function() {
+    'use strict';
 
     // We got a good response from the server
     if (xhr.status >= 200 && xhr.status < 400) {
@@ -68,6 +70,7 @@ xhr.onload = function() {
 
 // Handle an Ajax connection error
 xhr.onerror = function() {
+    'use strict';
     const error = 'Whoops! We couldn\'t reach the server. Please try again.';
     document.getElementById('datelist-error').innerHTML = error;
 };
