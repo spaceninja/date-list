@@ -1,9 +1,7 @@
 /* global moment, humanizeDuration */
 const datelistContent = document.getElementById('datelist-content');
 const datelistError = document.getElementById('datelist-error');
-const btnSortEvent = document.getElementById('btn-sort-event');
-const btnSortMonth = document.getElementById('btn-sort-month');
-const btnSortDuration = document.getElementById('btn-sort-duration');
+const sortButtons = Array.from(document.querySelectorAll('[data-sort-by]'));
 const xhr = new XMLHttpRequest();
 let dates;
 
@@ -27,7 +25,20 @@ const sortByKey = function(array, key) {
     });
 }
 
+//
 // Parse the date array and add new keys for sorting
+//
+// Note: In this function we evaluate whether the date is more than a
+// month ago, and if it is, we call a different method to generate the
+// readable text version of that string.
+//
+// That's because the fromNow() method from momentJS only shows the
+// most significant unit (2 minutes ago, 2 weeks ago, 2 years ago),
+// But we want dates like "14 years, 2 months ago".
+//
+// So we use moment.js for dates less than a month old, and then switch
+// to humanizeDuration() otherwise.
+//
 const parseDates = function(dateArray) {
     'use strict';
 
@@ -55,8 +66,7 @@ const parseDates = function(dateArray) {
             longDuration = "in " + longDuration;
         }
 
-        // decide which duration text to use based on how long the duration is,
-        // because the short duration text doesn't work well beyond a month
+        // decide which duration text to use based on how long the duration is
         if (Math.abs(diff) < millisecondsMonth) {
             // durations shorter than a month
             dateArray[i].duration = shortDuration;
@@ -103,11 +113,14 @@ const sortBy = function() {
     datelistContent.innerHTML = buildHTML(sortedDates);
 }
 
+// Add click event to trigger sorting on an element
+const enableSorting = function(e) {
+    'use strict';
+    e.addEventListener('click', sortBy);
+}
+
 // Add event listeners to sort buttons
-// There's gotta be a better way, right?
-btnSortEvent.addEventListener('click', sortBy);
-btnSortMonth.addEventListener('click', sortBy);
-btnSortDuration.addEventListener('click', sortBy);
+sortButtons.forEach(enableSorting);
 
 // Prepare the Ajax request
 xhr.open('GET', 'data/dates.json', true);
