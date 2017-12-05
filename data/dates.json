@@ -1,4 +1,5 @@
 [
+    { "event": "Kirk, James T", "date": "2233-03-22" },
     { "event": "Vandehey, PopPop", "date": "1922-11-26" },
     { "event": "Vandehey, Grammy", "date": "1926-11-09" },
     { "event": "Wedding, Grammy &amp; PopPop", "date": "1947-12-19" },
@@ -46,6 +47,5 @@
     { "event": "Scott starts at Say Media", "date": "2015-05-18" },
     { "event": "Vandehey, Gemma", "date": "2016-11-07" },
     { "event": "Sasaki-Stockman, Shelby", "date": "2016-11-09" },
-    { "event": "Vickers, Alice", "date": "2017-06-20" },
-    { "event": "Kirk, James T", "date": "2233-03-22" }
+    { "event": "Vickers, Alice", "date": "2017-06-20" }
 ]

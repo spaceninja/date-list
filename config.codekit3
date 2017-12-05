@@ -96,12 +96,6 @@
 		"sC": 3,
 		"tS": 1
 		},
-	"\/node_modules": {
-		"ft": 65536,
-		"oA": 2,
-		"oAP": "\/build\/node_modules",
-		"oF": 0
-		},
 	"\/package.json": {
 		"ft": 524288,
 		"oA": 1,
@@ -163,7 +157,7 @@
 	"creationDate": 510276171,
 	"displayValue": "date-list",
 	"displayValueWasSetByUser": 0,
-	"iconImageName": "meme-ceiling"
+	"iconImageName": "brackets_teal"
 	},
 "projectSettings": {
 	"abortBuildOnError": 1,
