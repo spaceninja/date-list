@@ -1,0 +1,26 @@
+{
+  "name": "spaceninja-date-list",
+  "version": "1.0.0",
+  "description": "Human-Readable List of Dates",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/spaceninja/date-list.git"
+  },
+  "author": "Scott Vandehey",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/spaceninja/date-list/issues"
+  },
+  "homepage": "https://github.com/spaceninja/date-list",
+  "devDependencies": {
+    "babel-preset-airbnb": "^2.4.0",
+    "eslint": "^4.11.0",
+    "eslint-config-airbnb-base": "^12.1.0",
+    "eslint-plugin-import": "^2.8.0",
+    "stylelint": "^8.2.0",
+    "stylelint-config-saymedia": "saymedia/stylelint-config-saymedia"
+  }
+}
