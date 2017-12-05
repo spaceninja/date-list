@@ -69,3 +69,22 @@ table {
     font-feature-settings: "tnum";
     font-variant-numeric: tabular-nums;
 }
+
+[data-sort-active="true"] {
+
+    &::after {
+        bottom: 0.1em;
+        content: "▲";
+        display: inline-block;
+        font-size: 0.66em;
+        margin-left: 0.5em;
+        position: relative;
+    }
+
+    &[data-sort-order="descending"] {
+
+        &::after {
+            transform: rotate(0.5turn);
+        }
+    }
+}
