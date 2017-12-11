@@ -2,7 +2,9 @@
 /* eslint-env browser */
 const datelistContent = document.getElementById('datelist-content');
 const datelistError = document.getElementById('datelist-error');
-const sortButtons = Array.from(document.querySelectorAll('[data-sort-by]'));
+const initialSortButton = document.getElementById('btn-sort-duration');
+const sortButtons = document.querySelectorAll('[data-sort-by]');
+const sortButtonsArray = Array.from(sortButtons);
 const xhr = new XMLHttpRequest();
 let dates;
 
@@ -115,21 +117,31 @@ const buildHTML = function buildHTML(dateArray) {
 // Sort the date array and rebuild the HTML using the new sort
 //
 const sortBy = function sortBy() {
-  const sortedDates = sortByKey(dates, this.dataset.sortBy);
-  datelistContent.innerHTML = buildHTML(sortedDates);
-};
-
-//
-// Add click event to trigger sorting on an element
-//
-const enableSorting = function enableSorting(e) {
-  e.addEventListener('click', sortBy);
+  sortByKey(dates, this.dataset.sortBy);
+  if (this.dataset.sortActive === 'true') {
+    if (this.dataset.sortOrder === 'ascending') {
+      datelistContent.innerHTML = buildHTML(dates.reverse());
+      this.dataset.sortOrder = 'descending';
+    } else {
+      datelistContent.innerHTML = buildHTML(dates);
+      this.dataset.sortOrder = 'ascending';
+    }
+  } else {
+    sortButtonsArray.forEach((e) => {
+      e.dataset.sortActive = 'false';
+    });
+    datelistContent.innerHTML = buildHTML(dates);
+    this.dataset.sortActive = 'true';
+    this.dataset.sortOrder = 'ascending';
+  }
 };
 
 //
 // Add event listeners to sort buttons
 //
-sortButtons.forEach(enableSorting);
+sortButtonsArray.forEach((e) => {
+  e.addEventListener('click', sortBy);
+});
 
 //
 // Prepare and send the Ajax request, and deal with the response
@@ -139,7 +151,10 @@ xhr.open('GET', 'data/dates.json', true);
 xhr.onload = function ajaxOnLoad() {
   if (xhr.status >= 200 && xhr.status < 400) {
     dates = parseDates(JSON.parse(xhr.responseText));
-    datelistContent.innerHTML = buildHTML(dates);
+    sortByKey(dates, initialSortButton.dataset.sortBy);
+    datelistContent.innerHTML = buildHTML(dates.reverse());
+    initialSortButton.dataset.sortOrder = 'descending';
+    initialSortButton.dataset.sortActive = 'true';
   } else {
     const error = 'Whoops! Something went wrong. Please try again.';
     datelistError.innerHTML = error;
