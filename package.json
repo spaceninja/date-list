@@ -21,6 +21,6 @@
     "eslint-config-airbnb-base": "^12.1.0",
     "eslint-plugin-import": "^2.8.0",
     "stylelint": "^8.2.0",
-    "stylelint-config-saymedia": "saymedia/stylelint-config-saymedia"
+    "stylelint-config-saymedia": "github:saymedia/stylelint-config-saymedia"
   }
 }
