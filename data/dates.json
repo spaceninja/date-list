@@ -55,6 +55,6 @@
     { "event": "Car Paid Off", "date": "2022-01-16" },
     { "event": "Debt Paid Off", "date": "2024-02-05" },
     { "event": "Say D&D group starts", "date": "2016-03-02" },
-    { "event": "Sasaki-Stockman, Camille", "date": "2020-01-30"}
+    { "event": "Sasaki-Stockman, Camille", "date": "2020-01-30"},
     { "event": "First Say D&D Game", "date": "2015-09-30" }
 ]
