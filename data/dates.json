@@ -55,5 +55,11 @@
     { "event": "Car Paid Off", "date": "2022-01-16" },
     { "event": "Debt Paid Off", "date": "2024-02-05" },
     { "event": "Sasaki-Stockman, Camille", "date": "2020-01-30"},
-    { "event": "First Say D&D Game", "date": "2015-09-30" }
+    { "event": "First Say D&D Game", "date": "2015-09-30" },
+    { "event": "Scott's last day in the office", "date": "2020-03-09" },
+    { "event": "WHO declares pandemic", "date": "2020-03-11" },
+    { "event": "Cloud Four office closes", "date": "2020-03-12" },
+    { "event": "Oregon schools close", "date": "2020-03-16" },
+    { "event": "Portland schools start remote learning", "date": "2020-04-06" },
+    { "event": "Leilani moves in", "date": "2020-05-01" },
 ]
