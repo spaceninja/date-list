@@ -61,5 +61,6 @@
     { "event": "Cloud Four office closes", "date": "2020-03-12" },
     { "event": "Oregon schools close", "date": "2020-03-16" },
     { "event": "Portland schools start remote learning", "date": "2020-04-06" },
-    { "event": "Leilani moves in", "date": "2020-05-01" }
+    { "event": "Leilani moves in", "date": "2020-05-01" },
+    { "event": "Scott and Chuck meet", "date": "2010-01-06" }
 ]
