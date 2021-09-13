@@ -1,11 +1,12 @@
-/* global moment, humanizeDuration */
-/* eslint-env browser */
+import '../sass/main.scss';
+import moment from 'moment';
+import humanizeDuration from 'humanize-duration';
+import rawDates from '../data/dates.json';
+
 const datelistContent = document.getElementById('datelist-content');
-const datelistError = document.getElementById('datelist-error');
 const initialSortButton = document.getElementById('btn-sort-duration');
 const sortButtons = document.querySelectorAll('[data-sort-by]');
 const sortButtonsArray = Array.from(sortButtons);
-const xhr = new XMLHttpRequest();
 let dates;
 
 //
@@ -26,7 +27,8 @@ const sortByKey = function sortByKey(array, key) {
     }
     if (x < y) {
       return -1;
-    } else if (x > y) {
+    }
+    if (x > y) {
       return 1;
     }
     return 0;
@@ -143,27 +145,8 @@ sortButtonsArray.forEach((e) => {
   e.addEventListener('click', sortBy);
 });
 
-//
-// Prepare and send the Ajax request, and deal with the response
-//
-xhr.open('GET', 'data/dates.json', true);
-
-xhr.onload = function ajaxOnLoad() {
-  if (xhr.status >= 200 && xhr.status < 400) {
-    dates = parseDates(JSON.parse(xhr.responseText));
-    sortByKey(dates, initialSortButton.dataset.sortBy);
-    datelistContent.innerHTML = buildHTML(dates.reverse());
-    initialSortButton.dataset.sortOrder = 'descending';
-    initialSortButton.dataset.sortActive = 'true';
-  } else {
-    const error = 'Whoops! Something went wrong. Please try again.';
-    datelistError.innerHTML = error;
-  }
-};
-
-xhr.onerror = function ajaxOnError() {
-  const error = 'Whoops! We couldn\'t reach the server. Please try again.';
-  datelistError.innerHTML = error;
-};
-
-xhr.send();
+dates = parseDates(rawDates);
+sortByKey(dates, initialSortButton.dataset.sortBy);
+datelistContent.innerHTML = buildHTML(dates.reverse());
+initialSortButton.dataset.sortOrder = 'descending';
+initialSortButton.dataset.sortActive = 'true';
