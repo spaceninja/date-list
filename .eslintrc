@@ -1,6 +1,0 @@
-{
-  "extends": [
-    "airbnb-base",
-    "airbnb-base/rules/strict",
-  ]
-}

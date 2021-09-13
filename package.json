@@ -3,7 +3,17 @@
   "version": "1.0.0",
   "description": "Human-Readable List of Dates",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "dev": "vite",
+    "build": "vite build",
+    "serve": "vite preview",
+    "lint": "run-s lint:js lint:css lint:prettier",
+    "lint:check": "run-s lint:*:check",
+    "lint:js": "eslint --fix .",
+    "lint:js:check": "eslint .",
+    "lint:css": "stylelint --fix '**/*.scss'",
+    "lint:css:check": "stylelint '**/*.scss'",
+    "lint:prettier": "prettier --write .",
+    "lint:prettier:check": "prettier --check ."
   },
   "repository": {
     "type": "git",
@@ -17,10 +27,20 @@
   "homepage": "https://github.com/spaceninja/date-list",
   "devDependencies": {
     "babel-preset-airbnb": "2.4.0",
-    "eslint": "4.18.2",
-    "eslint-config-airbnb-base": "12.1.0",
-    "eslint-plugin-import": "2.8.0",
-    "stylelint": "13.13.1",
-    "stylelint-config-saymedia": "github:saymedia/stylelint-config-saymedia"
+    "eslint": "^7.32.0",
+    "eslint-config-airbnb-base": "^14.2.1",
+    "eslint-config-prettier": "^8.3.0",
+    "eslint-plugin-import": "^2.24.2",
+    "npm-run-all": "^4.1.5",
+    "prettier": "^2.4.0",
+    "sass": "^1.39.2",
+    "stylelint": "^13.13.1",
+    "stylelint-config-prettier": "^8.0.2",
+    "stylelint-config-spaceninja": "^7.0.0",
+    "vite": "^2.5.7"
+  },
+  "dependencies": {
+    "humanize-duration": "^3.27.0",
+    "moment": "^2.29.1"
   }
 }

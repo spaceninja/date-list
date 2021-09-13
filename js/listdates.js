@@ -1,5 +1,7 @@
-/* global moment, humanizeDuration */
-/* eslint-env browser */
+import '../sass/main.scss';
+import moment from 'moment';
+import humanizeDuration from 'humanize-duration';
+
 const datelistContent = document.getElementById('datelist-content');
 const datelistError = document.getElementById('datelist-error');
 const initialSortButton = document.getElementById('btn-sort-duration');
@@ -26,7 +28,8 @@ const sortByKey = function sortByKey(array, key) {
     }
     if (x < y) {
       return -1;
-    } else if (x > y) {
+    }
+    if (x > y) {
       return 1;
     }
     return 0;
@@ -162,7 +165,7 @@ xhr.onload = function ajaxOnLoad() {
 };
 
 xhr.onerror = function ajaxOnError() {
-  const error = 'Whoops! We couldn\'t reach the server. Please try again.';
+  const error = "Whoops! We couldn't reach the server. Please try again.";
   datelistError.innerHTML = error;
 };
 
