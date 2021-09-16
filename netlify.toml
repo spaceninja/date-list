@@ -1,5 +1,0 @@
-# Settings apply to all build contexts
-[build]
-  # Ignore Renovate PRs
-  # @see https://www.netlify.com/blog/2020/04/27/ignore-unnecessary-builds-to-optimize-your-build-times/
-  ignore = "git log -1 --pretty=%B | grep bot@renovateapp.com"
