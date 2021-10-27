@@ -35,7 +35,7 @@
     "sass": "1.43.4",
     "stylelint": "13.13.1",
     "stylelint-config-prettier": "8.0.2",
-    "stylelint-config-spaceninja": "7.0.0",
+    "stylelint-config-spaceninja": "8.0.0",
     "vite": "2.6.12"
   },
   "dependencies": {
