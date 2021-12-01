@@ -1,12 +1,19 @@
 module.exports = {
   env: {
-    browser: true,
-    es2021: true,
+    node: true,
+    'jest/globals': true,
   },
-  extends: ['airbnb-base', 'prettier'],
-  parserOptions: {
-    ecmaVersion: 12,
-    sourceType: 'module',
+  plugins: ['jest'],
+  extends: ['airbnb-base', 'plugin:vue/vue3-recommended', 'prettier'],
+  rules: {
+    // override/add rules settings here, such as:
+    // 'vue/no-unused-vars': 'error'
   },
-  rules: {},
+  overrides: [
+    {
+      // HACK: https://github.com/vuejs/eslint-plugin-vue/issues/1355
+      files: ['**/*.html'],
+      rules: { 'vue/comment-directive': 'off' },
+    },
+  ],
 };

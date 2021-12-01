@@ -77,3 +77,28 @@ table {
     }
   }
 }
+
+th button {
+  display: inline-flex;
+}
+
+th svg {
+  fill: none;
+  height: 1em;
+  margin: auto;
+  stroke: currentColor;
+  stroke-linecap: round;
+  stroke-linejoin: round;
+  stroke-width: 20;
+  width: 0.5em;
+}
+
+.visually-hidden {
+  border: 0 !important;
+  clip: rect(1px, 1px, 1px, 1px) !important;
+  height: 1px !important;
+  overflow: hidden !important;
+  padding: 0 !important;
+  position: absolute !important;
+  width: 1px !important;
+}

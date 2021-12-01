@@ -1,2 +1,5 @@
+.DS_Store
 dist
+dist-ssr
+*.local
 .vscode

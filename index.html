@@ -2,55 +2,11 @@
 <html lang="en">
   <head>
     <meta charset="utf-8" />
-    <meta http-equiv="x-ua-compatible" content="ie=edge" />
     <title>Spirit Journey Formation Anniversary</title>
     <meta name="viewport" content="width=device-width, initial-scale=1" />
   </head>
   <body>
-    <h1>Spirit Journey Formation Anniversary</h1>
-    <table>
-      <thead>
-        <tr>
-          <th>
-            <button
-              type="button"
-              class="btn-sort-by"
-              data-sort-by="event"
-              id="btn-sort-event"
-            >
-              Event
-            </button>
-          </th>
-          <th>
-            <button
-              type="button"
-              class="btn-sort-by"
-              data-sort-by="month"
-              id="btn-sort-month"
-            >
-              Date
-            </button>
-          </th>
-          <th>
-            <button
-              type="button"
-              class="btn-sort-by"
-              data-sort-by="diff"
-              id="btn-sort-duration"
-            >
-              Duration
-            </button>
-          </th>
-        </tr>
-      </thead>
-      <tbody id="datelist-content">
-        <tr>
-          <td colspan="3">
-            <p id="datelist-error">loading</p>
-          </td>
-        </tr>
-      </tbody>
-    </table>
-    <script type="module" src="/js/listdates.js"></script>
+    <div id="app" class="container"></div>
+    <script type="module" src="/src/main.js"></script>
   </body>
 </html>
