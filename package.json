@@ -36,7 +36,7 @@
     "stylelint": "14.2.0",
     "stylelint-config-prettier": "9.0.3",
     "stylelint-config-spaceninja": "9.0.1",
-    "vite": "2.7.5"
+    "vite": "2.7.6"
   },
   "dependencies": {
     "humanize-duration": "3.27.1",
