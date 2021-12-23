@@ -1,9 +1,7 @@
 module.exports = {
   env: {
     node: true,
-    'jest/globals': true,
   },
-  plugins: ['jest'],
   extends: ['airbnb-base', 'plugin:vue/vue3-recommended', 'prettier'],
   rules: {
     // override/add rules settings here, such as:
