@@ -45,7 +45,7 @@ table {
   width: 100%;
 
   tbody tr:nth-child(odd) {
-    background: #f5f5f5;
+    background: rgba(0 0 0 / 5%);
 
     @media (prefers-color-scheme: dark) {
       background: rgb(255 255 255 / 5%);
