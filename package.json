@@ -23,10 +23,10 @@
     "date-fns": "2.28.0",
     "lodash.kebabcase": "4.1.1",
     "vite": "2.9.1",
-    "vue": "3.2.31"
+    "vue": "3.2.32"
   },
   "devDependencies": {
-    "@vue/compiler-sfc": "3.2.31",
+    "@vue/compiler-sfc": "3.2.32",
     "eslint-config-airbnb-base": "15.0.0",
     "eslint-config-prettier": "8.5.0",
     "eslint-plugin-import": "2.26.0",
