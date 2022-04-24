@@ -1,9 +1,9 @@
 import { ref, computed } from 'vue';
 import kebabCase from 'lodash.kebabcase';
 import parseISO from 'date-fns/parseISO';
-import differenceInSeconds from 'date-fns/differenceInSeconds';
+import differenceInMilliseconds from 'date-fns/differenceInMilliseconds';
 import format from 'date-fns/format';
-import formatDistanceToNowStrict from 'date-fns/formatDistanceToNowStrict';
+import humanizeDuration from 'humanize-duration';
 import rawDates from '../data/dates.json';
 
 export const allDates = ref([]);
@@ -77,6 +77,7 @@ export const fetchDates = () => {
   const parsedDates = rawDates.map((date) => {
     const mutableDate = { ...date };
     const parsedDate = parseISO(mutableDate.date);
+    const difference = differenceInMilliseconds(parsedDate, Date.now());
 
     // add kebab-case ID for use as a Vue key
     mutableDate.key = kebabCase(mutableDate.event);
@@ -85,15 +86,16 @@ export const fetchDates = () => {
     mutableDate.readable = format(parsedDate, 'PP');
 
     // format distance to be human-readable (42 years ago)
-    mutableDate.age = formatDistanceToNowStrict(parsedDate, {
-      addSuffix: true,
+    mutableDate.age = humanizeDuration(difference, {
+      largest: 2,
+      round: false,
     });
 
     // add month key for sorting (P = 08/22/1979)
     mutableDate.month = format(parsedDate, 'P');
 
     // add diff key for sorting
-    mutableDate.diff = differenceInSeconds(parsedDate, Date.now());
+    mutableDate.diff = difference;
 
     return mutableDate;
   });
