@@ -51,7 +51,7 @@ const getSortedDates = (dateArray, sortKey, sortDir) => {
  * @returns Array
  */
 export const sortedDates = computed(() =>
-  getSortedDates(allDates.value, sortBy.value, sortOrder.value)
+  getSortedDates(allDates.value, sortBy.value, sortOrder.value),
 );
 
 /**
