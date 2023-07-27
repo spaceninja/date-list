@@ -10,7 +10,7 @@ html {
   font-size: 14px;
   font-weight: 100;
 
-  @media screen and (min-width: 480px) {
+  @media screen and (width >= 480px) {
     font-size: 16px;
   }
 }
@@ -23,16 +23,16 @@ h1 {
   font-weight: 400;
   margin: 1rem 0.5rem 0.25em;
 
-  @media screen and (min-width: 480px) {
+  @media screen and (width >= 480px) {
     margin: 2rem 2rem 0.25em;
   }
 
-  @media screen and (min-width: 768px) {
+  @media screen and (width >= 768px) {
     font-size: 3em;
     font-weight: 200;
   }
 
-  @media screen and (min-width: 1024px) {
+  @media screen and (width >= 1024px) {
     font-size: 4em;
     font-weight: 100;
   }
@@ -58,7 +58,7 @@ table {
     text-align: left;
     vertical-align: top;
 
-    @media screen and (min-width: 480px) {
+    @media screen and (width >= 480px) {
       &:first-child {
         padding-left: 2em;
       }
