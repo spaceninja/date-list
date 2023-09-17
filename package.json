@@ -21,7 +21,7 @@
   "dependencies": {
     "@vitejs/plugin-vue": "4.3.4",
     "date-fns": "2.30.0",
-    "humanize-duration": "3.29.0",
+    "humanize-duration": "3.30.0",
     "lodash.kebabcase": "4.1.1",
     "vite": "4.4.9",
     "vue": "3.3.4"
