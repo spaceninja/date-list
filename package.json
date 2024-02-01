@@ -33,7 +33,7 @@
     "eslint-config-prettier": "9.1.0",
     "eslint-plugin-import": "2.29.1",
     "eslint-plugin-vue": "9.21.1",
-    "npm-run-all2": "5.0.0",
+    "npm-run-all2": "5.0.2",
     "postcss-html": "1.6.0",
     "prettier": "3.2.4",
     "sass": "1.70.0",
