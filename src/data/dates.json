@@ -32,7 +32,7 @@
   { "event": "Spaceninja.com registered", "date": "1999-06-16" },
   { "event": "MacCartney, Gavin", "date": "2000-04-02" },
   { "event": "Scott graduates PSU", "date": "2000-06-30" },
-  { "event": "Scott's first web job (RR)", "date": "2001-10-11" },
+  { "event": "Scott’s first web job (RR)", "date": "2001-10-11" },
   { "event": "Vandehey, Leilani", "date": "2002-06-14" },
   { "event": "Scott and Annie get engaged", "date": "2002-08-22" },
   { "event": "Wedding, Dave & Rose", "date": "2003-08-09" },
@@ -57,12 +57,13 @@
   { "event": "Sasaki-Stockman, Camille", "date": "2020-01-30" },
   { "event": "First Say D&D Game", "date": "2015-09-30" },
   { "event": "First 4E D&D Game", "date": "2009-04-03" },
-  { "event": "Scott's last day in the office", "date": "2020-03-09" },
+  { "event": "Scott’s last day in the office", "date": "2020-03-09" },
   { "event": "Scott and Chuck meet", "date": "2010-01-06" },
   { "event": "Acid and Dust", "date": "2023-07-21" },
   { "event": "Acid and Dust come home", "date": "2023-10-06" },
   { "event": "Friday Front-End", "date": "2015-08-17" },
   { "event": "Charlie and Kimo", "date": "2015-09-01" },
   { "event": "Charlie and Kimo come home", "date": "2020-08-31" },
+  { "event": "It’s a Very Exciting Time", "date": "2022-10-31" },
   { "event": "Vandehey, Oona", "date": "2020-08-21" }
 ]
