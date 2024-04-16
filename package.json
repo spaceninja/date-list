@@ -24,10 +24,10 @@
     "humanize-duration": "3.32.0",
     "lodash.kebabcase": "4.1.1",
     "vite": "5.2.9",
-    "vue": "3.4.22"
+    "vue": "3.4.23"
   },
   "devDependencies": {
-    "@vue/compiler-sfc": "3.4.22",
+    "@vue/compiler-sfc": "3.4.23",
     "eslint": "8.57.0",
     "eslint-config-airbnb-base": "15.0.0",
     "eslint-config-prettier": "9.1.0",
