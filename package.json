@@ -23,7 +23,7 @@
     "date-fns": "3.6.0",
     "humanize-duration": "3.32.1",
     "lodash.kebabcase": "4.1.1",
-    "vite": "5.4.2",
+    "vite": "5.4.3",
     "vue": "3.4.38"
   },
   "devDependencies": {
