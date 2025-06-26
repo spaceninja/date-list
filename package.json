@@ -37,7 +37,7 @@
     "prettier": "3.6.1",
     "sass": "1.89.2",
     "stylelint": "16.21.0",
-    "stylelint-config-recommended-vue": "1.6.0",
+    "stylelint-config-recommended-vue": "1.6.1",
     "stylelint-config-spaceninja": "15.0.0",
     "vue-eslint-parser": "10.1.4"
   }
