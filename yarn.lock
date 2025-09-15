@@ -1295,10 +1295,10 @@ htmlparser2@^8.0.0:
     domutils "^3.0.1"
     entities "^4.4.0"
 
-humanize-duration@3.33.0:
-  version "3.33.0"
-  resolved "https://registry.yarnpkg.com/humanize-duration/-/humanize-duration-3.33.0.tgz#29b3276e68443e513fc85223d094faacdbb8454c"
-  integrity sha512-vYJX7BSzn7EQ4SaP2lPYVy+icHDppB6k7myNeI3wrSRfwMS5+BHyGgzpHR0ptqJ2AQ6UuIKrclSg5ve6Ci4IAQ==
+humanize-duration@3.33.1:
+  version "3.33.1"
+  resolved "https://registry.yarnpkg.com/humanize-duration/-/humanize-duration-3.33.1.tgz#e4df2ce6660f24a6a3bf4a7b3bc63edb5be7826f"
+  integrity sha512-hwzSCymnRdFx9YdRkQQ0OYequXiVAV6ZGQA2uzocwB0F4309Ke6pO8dg0P8LHhRQJyVjGteRTAA/zNfEcpXn8A==
 
 ignore@^5.2.0:
   version "5.3.0"
