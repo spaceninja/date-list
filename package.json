@@ -34,7 +34,7 @@
     "globals": "16.5.0",
     "npm-run-all2": "8.0.4",
     "postcss-html": "1.8.0",
-    "prettier": "3.7.3",
+    "prettier": "3.7.4",
     "sass": "1.94.2",
     "stylelint": "16.26.1",
     "stylelint-config-recommended-vue": "1.6.1",
