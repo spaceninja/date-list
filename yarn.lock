@@ -597,7 +597,12 @@
   resolved "https://registry.yarnpkg.com/@sindresorhus/merge-streams/-/merge-streams-4.0.0.tgz#abb11d99aeb6d27f1b563c38147a72d50058e339"
   integrity sha512-tlqY9xq5ukxTUZBmoOp+m61cqwQD5pHJtFY3Mn8CA8ps6yghLH/Hw8UPdqg4OLmFW3IFlcXnQNmo/dh8HzXYIQ==
 
-"@types/estree@1.0.8":
+"@types/esrecurse@^4.3.1":
+  version "4.3.1"
+  resolved "https://registry.yarnpkg.com/@types/esrecurse/-/esrecurse-4.3.1.tgz#6f636af962fbe6191b830bd676ba5986926bccec"
+  integrity sha512-xJBAbDifo5hpffDBuHl0Y8ywswbiAp/Wi7Y/GtAgSlZyIABppyurxVueOPE8LUQOxdlgi6Zqce7uoEpqNTeiUw==
+
+"@types/estree@1.0.8", "@types/estree@^1.0.8":
   version "1.0.8"
   resolved "https://registry.yarnpkg.com/@types/estree/-/estree-1.0.8.tgz#958b91c991b1867ced318bedea0e215ee050726e"
   integrity sha512-dWHzHa2WqEXI/O1E9OjrocMTKJl2mSrEolh1Iomrv6U+JuNwaHXsXx9bLu5gG7BUWFIN0skIQJQ/L1rIex4X6w==
@@ -1071,7 +1076,17 @@ eslint-plugin-vue@10.7.0:
     semver "^7.6.3"
     xml-name-validator "^4.0.0"
 
-eslint-scope@^8.2.0, eslint-scope@^8.4.0:
+"eslint-scope@^8.2.0 || ^9.0.0":
+  version "9.1.0"
+  resolved "https://registry.yarnpkg.com/eslint-scope/-/eslint-scope-9.1.0.tgz#dfcb41d6c0d73df6b977a50cf3e91c41ddb4154e"
+  integrity sha512-CkWE42hOJsNj9FJRaoMX9waUFYhqY4jmyLFdAdzZr6VaCg3ynLYx4WnOdkaIifGfH4gsUcBTn4OZbHXkpLD0FQ==
+  dependencies:
+    "@types/esrecurse" "^4.3.1"
+    "@types/estree" "^1.0.8"
+    esrecurse "^4.3.0"
+    estraverse "^5.2.0"
+
+eslint-scope@^8.4.0:
   version "8.4.0"
   resolved "https://registry.yarnpkg.com/eslint-scope/-/eslint-scope-8.4.0.tgz#88e646a207fad61436ffa39eb505147200655c82"
   integrity sha512-sNXOfKCn74rt8RICKMvJS7XKV/Xk9kA7DyJr8mJik3S7Cwgy3qlkkmyS2uQB3jiJg6VNdZd/pDBJu0nvG2NlTg==
@@ -1088,6 +1103,11 @@ eslint-visitor-keys@^4.2.0:
   version "4.2.0"
   resolved "https://registry.yarnpkg.com/eslint-visitor-keys/-/eslint-visitor-keys-4.2.0.tgz#687bacb2af884fcdda8a6e7d65c606f46a14cd45"
   integrity sha512-UyLnSehNt62FFhSwjZlHmeokpRK59rcz29j+F1/aDgbkbRTk7wIc9XzdoasMUbRNKDM0qQt/+BJ4BrpFeABemw==
+
+"eslint-visitor-keys@^4.2.0 || ^5.0.0", eslint-visitor-keys@^5.0.0:
+  version "5.0.0"
+  resolved "https://registry.yarnpkg.com/eslint-visitor-keys/-/eslint-visitor-keys-5.0.0.tgz#b9aa1a74aa48c44b3ae46c1597ce7171246a94a9"
+  integrity sha512-A0XeIi7CXU7nPlfHS9loMYEKxUaONu/hTEzHTGba9Huu94Cq1hPivf+DE5erJozZOky0LfvXAyrV/tcswpLI0Q==
 
 eslint-visitor-keys@^4.2.1:
   version "4.2.1"
@@ -1143,7 +1163,16 @@ espree@^10.0.1:
     acorn-jsx "^5.3.2"
     eslint-visitor-keys "^4.2.0"
 
-espree@^10.3.0, espree@^10.4.0:
+"espree@^10.3.0 || ^11.0.0":
+  version "11.1.0"
+  resolved "https://registry.yarnpkg.com/espree/-/espree-11.1.0.tgz#7d0c82a69f8df670728dba256264b383fbf73e8f"
+  integrity sha512-WFWYhO1fV4iYkqOOvq8FbqIhr2pYfoDY0kCotMkDeNtGpiGGkZ1iov2u8ydjtgM8yF8rzK7oaTbw2NAzbAbehw==
+  dependencies:
+    acorn "^8.15.0"
+    acorn-jsx "^5.3.2"
+    eslint-visitor-keys "^5.0.0"
+
+espree@^10.4.0:
   version "10.4.0"
   resolved "https://registry.yarnpkg.com/espree/-/espree-10.4.0.tgz#d54f4949d4629005a1fa168d937c3ff1f7e2a837"
   integrity sha512-j6PAQ2uUr79PZhBjP5C5fhl8e39FmRnOjsD5lGnWrFU8i2G776tBK7+nP8KuQUTTyAZUwfQqXAgrVH5MbH9CYQ==
@@ -2310,15 +2339,15 @@ vite@7.3.1:
   optionalDependencies:
     fsevents "~2.3.3"
 
-vue-eslint-parser@10.2.0:
-  version "10.2.0"
-  resolved "https://registry.yarnpkg.com/vue-eslint-parser/-/vue-eslint-parser-10.2.0.tgz#cb53f89b14c7f5bf6a95c9532e3b2961ab619d61"
-  integrity sha512-CydUvFOQKD928UzZhTp4pr2vWz1L+H99t7Pkln2QSPdvmURT0MoC4wUccfCnuEaihNsu9aYYyk+bep8rlfkUXw==
+vue-eslint-parser@10.3.0:
+  version "10.3.0"
+  resolved "https://registry.yarnpkg.com/vue-eslint-parser/-/vue-eslint-parser-10.3.0.tgz#581eef6b67504b4e1efb9208febc9cda52cadd6b"
+  integrity sha512-Aj1cCjD3HQjp5B8cLr6zJjISEOkr0MCrqvwLg3MeyGDjKlL8uMFLKfVbP7Te09cG9Y9KmzJwwnD7hf884CpcOg==
   dependencies:
     debug "^4.4.0"
-    eslint-scope "^8.2.0"
-    eslint-visitor-keys "^4.2.0"
-    espree "^10.3.0"
+    eslint-scope "^8.2.0 || ^9.0.0"
+    eslint-visitor-keys "^4.2.0 || ^5.0.0"
+    espree "^10.3.0 || ^11.0.0"
     esquery "^1.6.0"
     semver "^7.6.3"
 

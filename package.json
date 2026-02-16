@@ -39,6 +39,6 @@
     "stylelint": "17.2.0",
     "stylelint-config-recommended-vue": "1.6.1",
     "stylelint-config-spaceninja": "15.0.0",
-    "vue-eslint-parser": "10.2.0"
+    "vue-eslint-parser": "10.3.0"
   }
 }
