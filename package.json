@@ -36,7 +36,7 @@
     "postcss-html": "1.8.1",
     "prettier": "3.8.1",
     "sass": "1.97.3",
-    "stylelint": "17.2.0",
+    "stylelint": "17.3.0",
     "stylelint-config-recommended-vue": "1.6.1",
     "stylelint-config-spaceninja": "15.0.0",
     "vue-eslint-parser": "10.3.0"
