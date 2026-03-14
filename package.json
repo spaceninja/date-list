@@ -35,7 +35,7 @@
     "npm-run-all2": "8.0.4",
     "postcss-html": "1.8.1",
     "prettier": "3.8.1",
-    "sass": "1.97.3",
+    "sass": "1.98.0",
     "stylelint": "17.4.0",
     "stylelint-config-recommended-vue": "1.6.1",
     "stylelint-config-spaceninja": "15.0.0",
