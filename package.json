@@ -30,7 +30,7 @@
     "@vue/compiler-sfc": "3.5.33",
     "eslint": "9.39.4",
     "eslint-config-prettier": "10.1.8",
-    "eslint-plugin-vue": "10.9.0",
+    "eslint-plugin-vue": "10.9.1",
     "globals": "17.6.0",
     "npm-run-all2": "8.0.4",
     "postcss-html": "1.8.1",
