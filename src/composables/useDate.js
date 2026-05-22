@@ -1,8 +1,8 @@
 import { ref, computed } from 'vue';
 import kebabCase from 'lodash.kebabcase';
-import parseISO from 'date-fns/parseISO';
-import differenceInMilliseconds from 'date-fns/differenceInMilliseconds';
-import format from 'date-fns/format';
+import { parseISO } from 'date-fns/parseISO';
+import { differenceInMilliseconds } from 'date-fns/differenceInMilliseconds';
+import { format } from 'date-fns/format';
 import humanizeDuration from 'humanize-duration';
 import rawDates from '../data/dates.json';
 
