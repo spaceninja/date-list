@@ -46,7 +46,7 @@ table {
   width: 100%;
 
   tbody tr:nth-child(odd) {
-    background: rgba(0 0 0 / 5%);
+    background: rgb(0 0 0 / 5%);
 
     @media (prefers-color-scheme: dark) {
       background: rgb(255 255 255 / 5%);
@@ -116,7 +116,7 @@ th svg {
 
 .visually-hidden {
   border: 0 !important;
-  clip: rect(1px, 1px, 1px, 1px) !important;
+  clip-path: inset(50%) !important;
   height: 1px !important;
   overflow: hidden !important;
   padding: 0 !important;
