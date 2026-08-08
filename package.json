@@ -24,11 +24,11 @@
     "humanize-duration": "3.34.0",
     "lodash.kebabcase": "4.1.1",
     "vite": "8.2.0",
-    "vue": "3.5.39"
+    "vue": "3.5.41"
   },
   "devDependencies": {
     "@eslint/js": "10.0.1",
-    "@vue/compiler-sfc": "3.5.39",
+    "@vue/compiler-sfc": "3.5.41",
     "eslint": "10.8.0",
     "eslint-config-prettier": "10.1.8",
     "eslint-plugin-vue": "10.10.0",
