@@ -34,11 +34,11 @@
     "eslint-plugin-vue": "10.10.0",
     "globals": "17.11.0",
     "npm-run-all2": "9.0.3",
-    "postcss-html": "1.8.1",
+    "postcss-html": "2.0.0",
     "prettier": "3.9.6",
     "sass": "1.102.0",
     "stylelint": "17.14.1",
-    "stylelint-config-recommended-vue": "1.6.1",
+    "stylelint-config-recommended-vue": "2.0.0",
     "stylelint-config-spaceninja": "17.0.0",
     "vue-eslint-parser": "10.4.1"
   }
