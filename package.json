@@ -19,7 +19,7 @@
     "lint:prettier:check": "prettier . --check"
   },
   "dependencies": {
-    "@vitejs/plugin-vue": "6.0.8",
+    "@vitejs/plugin-vue": "6.0.9",
     "date-fns": "4.4.0",
     "humanize-duration": "3.35.0",
     "lodash.kebabcase": "4.1.1",
